@@ -1,0 +1,162 @@
+/*Global*/
+@font-face{
+    src:url(/fonts/AniMe\ Matrix\ Font.otf);
+    font-family: anime;
+
+}
+@font-face{
+    font-family: font2;
+    src: url(/fonts/CasanovaScotia-Xm0K.ttf);
+}
+@font-face{
+    font-family: font3;
+    src: url(/fonts/Neuterous-nRD9g.ttf);
+}
+@font-face{
+    font-family: font4;
+    src: url(/fonts/Revamped-X3q1a.ttf);
+}
+
+@font-face{
+    font-family: font5;
+    src: url(/fonts/FallingSkyBoldplusOblique-yxmV.otf);
+}
+@font-face{
+    font-family: font6;
+    src: url(/fonts/JosefinSansRegular-x3LYV.ttf);
+}
+
+
+main{
+    margin: 10px;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("/images/2075614.jpg");
+    background-size:contain;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.h3{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.p{
+    margin: 0px 0px;
+}
+
+.title{
+    background-color: rgba(66, 76, 80, 0.606);
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: auto;
+    font-size: 20px;
+    font-family: font2;
+}
+
+.description{
+    background-color: rgba(66, 76, 80, 0.606);
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 20px auto;
+    font-size: 15px;
+
+}
+
+.sub-heading{
+    font-family: font2;
+    font-weight: lighter;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.para{
+    font-family: font5;
+    font-weight: lighter;
+    font-size: 18px;
+    color:  rgb(207, 230, 228);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+
+/*Navbar*/
+
+.HEAD{
+    font-family: anime;
+    margin: 10px 10px ;
+    font-size: 45px;
+    padding: 0px ;
+}
+
+
+.navbar{
+    display: grid;
+    align-items: center;
+    
+}
+
+.navigation{
+    background-color: rgba(92, 115, 123, 0.606);
+    border-radius: 5px;
+    padding: 0px;
+    margin: 10px;
+    display: inline-block;
+
+}
+
+.nav-list{
+    list-style-type: none;
+    overflow: hidden;
+    padding-inline-start: 0px;
+}
+
+.nav-item a{
+    
+    float: left;
+    display: block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: font2;
+    font-weight: lighter;
+    transition: background-color 0.2s;
+}
+.nav-item a:hover{
+    background-color: rgba(50, 63, 67, 0.64);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.fa-house{
+    padding-right: 7px;
+
+}
+
+.fa-circle-info{
+    padding-right: 7px;
+}
+
+.fa-id-badge{
+    padding-right: 7px;
+}
+
+
+/*Nav- bar end*/
+
+
+.fa-chevron-right{
+    padding-right: 5px;
+}

@@ -1,0 +1,269 @@
+/*Global*/
+@font-face{
+    src:url(/fonts/AniMe\ Matrix\ Font.otf);
+    font-family: anime;
+
+}
+@font-face{
+    font-family: font2;
+    src: url(/fonts/CasanovaScotia-Xm0K.ttf);
+}
+@font-face{
+    font-family: font3;
+    src: url(/fonts/Neuterous-nRD9g.ttf);
+}
+@font-face{
+    font-family: font4;
+    src: url(/fonts/Revamped-X3q1a.ttf);
+}
+
+@font-face{
+    font-family: font5;
+    src: url(/fonts/FallingSkyBoldplusOblique-yxmV.otf);
+}
+@font-face{
+    font-family: font6;
+    src: url(/fonts/JosefinSansRegular-x3LYV.ttf);
+}
+
+main{
+    margin: 10px;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("/images/anime-aesthetic-night-sky-iln70o2bg4sjlivl.jpg");
+    background-size:cover;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.h3{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.title{
+    font-family: font2;
+    font-weight: lighter;
+}
+
+.p{
+    margin: 0px 0px;
+}
+.forum{
+    background-color: rgba(92, 115, 123, 0.606);
+    border-radius: 5px;
+    padding: 2px 20px;
+    margin: 10px auto 20px;
+    font-size: 14px;
+    font-family: font2;
+    
+}
+
+.main{
+    background-color: rgba(92, 115, 123, 0.606);
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: auto;
+}
+.bottom{
+    display: flex;
+    color: rgb(207, 230, 228);
+}
+
+.author{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.time-date{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.comment-no{
+    padding-right: 0 ;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.ubutton {
+    background-color: rgba(16, 170, 2, 0.781); 
+    padding: 3px 3px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+
+  }
+
+.dbutton {
+    background-color: rgba(255, 48, 48, 0.596); 
+    padding: 3px 3px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.row{
+    padding: 0px 5px;
+}
+
+.list{
+    padding: 0px 25px;
+}
+
+/*Navbar*/
+
+.HEAD{
+    font-family: anime;
+    margin: 10px 10px ;
+    font-size: 45px;
+    padding: 0px ;
+}
+
+.HEAD span{
+    position: relative;
+}
+
+.HEAD span::after{
+    content:"";
+    position:absolute;
+    left:0;
+    height:100%;
+    width: 100%;
+    background: url(/images/anime-aesthetic-night-sky-iln70o2bg4sjlivl.jpg);
+    background-size:contain;
+    border-left: 2px solid white;
+    animation: typing 5.0s steps(12) infinite;
+}
+@keyframes typing {
+    40%, 60%{
+        left: calc(100%);
+      }
+      100%{
+        left: 0;
+      }
+}
+.navbar{
+    display: grid;
+    align-items: center;
+    
+}
+
+.navigation{
+    background-color: rgba(92, 115, 123, 0.606);
+    border-radius: 5px;
+    padding: 0px;
+    margin: 10px;
+    display: inline-block;
+
+}
+
+.nav-list{
+    list-style-type: none;
+    overflow: hidden;
+    padding-inline-start: 0px;
+}
+
+.nav-item a{
+    
+    float: left;
+    display: block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: font2;
+    font-weight: lighter;
+    transition: background-color 0.2s;
+
+}
+.nav-item a:hover{
+    background-color: rgba(50, 63, 67, 0.64);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.fa-house{
+    padding-right: 7px;
+
+}
+
+.fa-circle-info{
+    padding-right: 7px;
+}
+
+.fa-fire{
+    padding-right: 7px;
+}
+
+.fa-id-badge{
+    padding-right: 7px;
+}
+
+.fa-chevron-right{
+    padding-right: 5px;
+}
+
+button{
+    border-radius: 5px;
+}
+
+/*Add post section*/
+
+.main-2{
+    background-color: rgba(92, 115, 123, 0.606);
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-2{
+    font-family: font2;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+textarea#p-title{
+    background-color: rgba(46, 53, 56, 0.606);
+    border-radius: 5px;
+    width: 80%;
+    height: 45px;
+    color: white;
+    margin-left: 20px;
+    font-family: font5;
+    font-size: 25px;
+}
+
+textarea#p-description{
+    background-color: rgba(46, 53, 56, 0.606);
+    border-radius: 5px;
+    width: 80%;
+    height: auto;
+    color: white;
+    margin-left: 20px;
+    font-family: font5;
+    font-size: 15px;
+}
+
+.Add-post {
+    border-radius: 5px;
+    background-color: rgba(42, 45, 42, 0.908);
+    color: aliceblue;
+    font-family:font2;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}

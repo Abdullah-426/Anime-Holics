@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime-Holics</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/2abfb0e6dc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="HEAD"><span><a href="index.html">Anime-Holics</a></span></h1>
+        <div class="navbar">
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/index.html"><i class="fa-solid fa-house"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about.html"><i class="fa-solid fa-circle-info"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html"><i class="fa-solid fa-id-badge"></i>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="forum">
+                <h2><i class="fa-solid fa-fire"></i>Forum</h2>
+            </div>
+            <div class="main">
+                <ol class="list">
+                   <!-- used js to insert rows  -->
+                </ol>
+            </div>
+
+            <div class="main-2">
+                <h3 class="title-2"><i class="fa-solid fa-chevron-right"></i>Add Post</h3>
+                <textarea id="p-title"  cols="30" rows="10" placeholder="Enter Post title"></textarea> <br>
+                <textarea id="p-description" cols="30" rows="10" placeholder="Enter Post Description"></textarea> <br>
+                <button class="Add-post">Add Post</button>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script src="/js/main.js"></script>
+    <script>
+        console.log(threads);
+        let container=document.querySelector('ol');
+
+        function addPost(thread){
+            // creating a string to replace value in index.html
+            let html= `  
+            <li class="row">
+                        <a href="/thread.html?${thread.id}">
+                            <h3 class="title">
+                                ${thread.title}
+                            </h3>
+                        </a>
+                        <div class="bottom">
+                            <p class="author">
+                                By ${thread.author}
+                            </p>
+                            |
+                            <p class="time-date">
+                                ${new Date(thread.date).toLocaleString()}
+                            </p>
+                            |
+                            <p class="comment-no">
+                                ${thread.comments.length} comments
+                            </p>
+                            <button class="ubutton" type="button" value="upvote"> <img
+                                    src="/images/icons8-thumbs-up-96.png" alt="upvote" width="15px"></button>
+                            <button class="dbutton" type="button" value="upvote"> <img
+                                    src="/images/icons8-thumbs-down-96.png" alt="upvote" width="15px"></button>
+
+                        </div>
+
+                    </li>
+                    <hr>
+            `
+            container.insertAdjacentHTML("beforeend",html);
+        }
+
+        for (let thread of threads){
+            addPost(thread);
+        }
+
+        let bttn= document.querySelector(".Add-post");
+        bttn.addEventListener('click', function() {
+            let txt1=document.querySelector('textarea#p-title');
+            let txt2=document.querySelector('textarea#p-description');
+            let thread={
+                id:threads.length + 1,
+                title: txt1.value,
+                author: "User123",
+                date: Date.now(),
+                content: txt2.value,
+                count:0,
+                comments:[
+                    {
+                        author:"Ronnie",
+                        date: Date.now(),
+                        content:"Hey there"
+                    },
+                    {
+                        author:"Rohan",
+                        date: Date.now(),
+                        content:"Hello!"
+                    }
+
+                ]
+            }
+            addPost(thread);
+            txt1.value=""
+            txt2.value=""
+            threads.push(thread); //pushing the new comment into the JSON object and then updating in local storage.
+            localStorage.setItem('threads',JSON.stringify(threads))
+        })
+    </script>
+</body>
+
+</html>
+

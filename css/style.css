@@ -56,6 +56,7 @@ a {
 .title {
     font-family: font2;
     font-weight: lighter;
+    word-wrap: break-word;
 }
 
 .p {
@@ -63,7 +64,7 @@ a {
 }
 
 .forum {
-    background-color: rgba(92, 115, 123, 0.606);
+    background-color: rgba(66, 76, 80, 0.606);
     border-radius: 5px;
     padding: 2px 20px;
     margin: 10px auto 20px;
@@ -73,7 +74,7 @@ a {
 }
 
 .main {
-    background-color: rgba(92, 115, 123, 0.606);
+    background-color: rgba(66, 76, 80, 0.606);
     border-radius: 5px;
     padding: 5px 5px;
     margin: auto;
@@ -260,7 +261,7 @@ button {
 /*Add post section*/
 
 .main-2 {
-    background-color: rgba(92, 115, 123, 0.606);
+    background-color: rgba(66, 76, 80, 0.606);
     border-radius: 5px;
     padding: 5px 5px;
     margin-top: 20px;
@@ -274,7 +275,7 @@ button {
 }
 
 textarea#p-title {
-    background-color: rgba(46, 53, 56, 0.606);
+    background-color: rgba(36, 41, 43, 0.606);
     border-radius: 5px;
     width: 80%;
     height: 45px;
@@ -285,7 +286,7 @@ textarea#p-title {
 }
 
 textarea#p-description {
-    background-color: rgba(46, 53, 56, 0.606);
+    background-color: rgba(36, 41, 43, 0.606);
     border-radius: 5px;
     width: 80%;
     height: auto;
@@ -304,4 +305,30 @@ textarea#p-description {
     font-weight: lighter;
     margin-left: 20px;
     margin-bottom: 15px;
+}
+
+
+/* For smartphones */
+@media screen and (max-width: 460px){
+
+    .author {
+        padding-right: 7px;
+        padding-left: 7px;
+        margin: 0px;
+        font-size: 12px;
+    }
+
+    .time-date {
+        padding-right: 7px;
+        padding-left: 7px;
+        margin: 0px;
+        font-size: 12px;
+    }
+
+    .comment-no {
+        padding-right: 10px;
+        padding-left: 7px;
+        margin: 0px;
+        font-size: 12px;
+    }
 }

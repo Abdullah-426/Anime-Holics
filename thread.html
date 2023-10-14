@@ -153,9 +153,9 @@
                     <p class="author">
                         ${thread.author}
                     </p>
-
-                    <pre class="time-date">|  ${new Date(thread.date).toLocaleString()}  |</pre>
-
+                    <p class="seperator">|</p>
+                    <p class="time-date">${new Date(thread.date).toLocaleString()}</p>
+                    <p class="seperator">|</p>
                     <p class="comment-no">
                         ${thread.comments.length} comments
                     </p>
